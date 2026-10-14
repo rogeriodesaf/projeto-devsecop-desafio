@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
     <title>Gerenciador de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,8 +28,8 @@
         <div class="card">
             <h2>➕ Nova Tarefa</h2>
             <input type="text" id="new-task" placeholder="Digite uma tarefa...">
-            <button onclick="addTask()">Adicionar</button>
-            <div id="output"></div>
+            <button type="button" id="add-task">Adicionar</button>
+            <ul id="output"></ul>
         </div>
 
         <footer>
@@ -38,3 +39,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
