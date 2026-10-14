@@ -1,0 +1,22 @@
+rules:
+  - id: no-eval
+    languages: [javascript]
+    severity: ERROR
+    message: Não execute dados como JavaScript.
+    pattern: eval(...)
+  - id: no-html-assignment
+    languages: [javascript]
+    severity: ERROR
+    message: Use textContent e createElement para tarefas.
+    patterns:
+      - pattern-either:
+          - pattern: $X.innerHTML = $Y
+          - pattern: $X.outerHTML = $Y
+  - id: no-browser-credentials
+    languages: [javascript]
+    severity: ERROR
+    message: Credenciais não podem estar no JavaScript público.
+    patterns:
+      - pattern-either:
+          - pattern: const API_KEY = "..."
+          - pattern: const DB_PASSWORD = "..."

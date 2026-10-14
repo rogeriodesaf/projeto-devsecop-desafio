@@ -1,0 +1,8 @@
+title = "Desafio DevSecOps"
+[extend]
+useDefault = true
+[[rules]]
+id = "browser-db-password"
+description = "Senha de banco no JavaScript público"
+regex = '''(?i)DB_PASSWORD\s*=\s*["']([^"'\r\n]+)["']'''
+secretGroup = 1

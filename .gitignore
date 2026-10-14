@@ -1,0 +1,6 @@
+node_modules/
+artifact.tar
+artifact.tar.sha256
+artifact.sigstore.json
+site/
+.semgrep/
